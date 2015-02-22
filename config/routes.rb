@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :places
-  root "places#index"
-  
+  get '/test', to: 'places#index'
+  root 'places#index'
 end

@@ -7,9 +7,10 @@
 			%h1.panel-title=place.name
 		.panel-body
 			%p=truncate(place.description, length: 440, separator: ' ')
+			=image_tag place.image.url(:small)
 		.panel-footer
 			=link_to 'Like', place
-			=place.category.name
+			
 			.pull-right
 				=link_to 'Show', place
 				=link_to 'Edit', place
