@@ -1,0 +1,20 @@
+%panel-heading
+	%p#notice=notice
+
+.panel.panel-default
+	.panel-heading
+		%h3=@place.name
+	.panel-body
+		.col-sm-5
+			%p
+				%strong	Description
+			%p=@place.description
+		.col-sm-7
+			%center
+				=image_tag @place.image.url(:normal)
+
+=link_to 'Edit', edit_place_path(@place)
+=link_to 'Back', places_path
+<p id="notice"><%= notice %></p>
+
+

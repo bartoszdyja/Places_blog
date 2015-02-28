@@ -1,4 +1,5 @@
-<%= form_for @place, :url => places_path, :html => { :multipart => true } do |f| %>
+<div class="panel panel-default">
+<%= form_for @place, :html => { :multipart => true } do |f| %>
   <% if @place.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
@@ -10,22 +11,27 @@
       </ul>
     </div>
   <% end %>
+  <div class="panel-body">
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="field" id="note">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+    <div class="field">
+      <%= f.label :image %><br>
+      <%= f.file_field :image %>
+    </div>
 
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
+
+</div>
+</div>

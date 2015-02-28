@@ -3,7 +3,92 @@
 
 .navbar {
 margin-bottom: 0px;
+
 }
+
+h1
+{
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+h1 span
+{
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+textarea#place_description {
+    width:50%;
+    display:block;
+    max-width:100%;
+    line-height:1.5;
+    padding:15px 15px 30px;
+    border-radius:3px;
+    border:1px solid #F7E98D;
+    font:13px Tahoma, cursive;
+    transition:box-shadow 0.5s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    font-smoothing:subpixel-antialiased;
+    background:linear-gradient(#F9EFAF, #F7E98D);
+    background:-o-linear-gradient(#F9EFAF, #F7E98D);
+    background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+    background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+    background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
+    margin-bottom: 15px;
+}
+
+input#place_name {
+    width:50%;
+    display:block;
+    max-width:100%;
+    line-height:1.5;
+    padding:5px 5px 5px;
+    border-radius:3px;
+    border:1px solid #F7E98D;
+    font:13px Tahoma, cursive;
+    transition:box-shadow 0.5s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    font-smoothing:subpixel-antialiased;
+    background:linear-gradient(#F9EFAF, #F7E98D);
+    background:-o-linear-gradient(#F9EFAF, #F7E98D);
+    background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+    background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+    background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
+}
+
+input#place_image {
+    width:50%;
+    display:block;
+    max-width:100%;
+    line-height:1.5;
+    padding:5px 5px 5px;
+    border-radius:3px;
+    border:1px solid #F7E98D;
+    font:13px Tahoma, cursive;
+    transition:box-shadow 0.5s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    font-smoothing:subpixel-antialiased;
+    background:linear-gradient(#F9EFAF, #F7E98D);
+    background:-o-linear-gradient(#F9EFAF, #F7E98D);
+    background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+    background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+    background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
+    margin-bottom: 15px;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #9D9D9D;
+}
+
 
 html {
 	background: url(bg.jpg) no-repeat center center fixed; 
@@ -31,102 +116,20 @@ body
 	margin-bottom: 30px;
 }
 
-#wrapper {
-padding-left: 0;
-padding-top: 50px;
--webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
-transition: all 0.5s ease;
+.col-sm-7
+{
+  min-width: 650px;
 }
-#wrapper.toggled {
-padding-left: 150px;
-}
-#sidebar-wrapper {
-z-index: 1000;
-position: fixed;
-left: 150px;
-width: 0;
-height: 100%;
-margin-left: -150px;
-overflow-y: auto;
-background: rgb(255,255,255); /* for IE */
- background: rgba(255,255,255,0.75);
--webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
-transition: all 0.5s ease;
-}
-#wrapper.toggled #sidebar-wrapper {
-width: 150px;
-}
-#page-content-wrapper {
-width: 100%;
-position: absolute;
-padding: 15px;
-}
-#wrapper.toggled #page-content-wrapper {
-position: absolute;
-margin-right: -150px;
-}
-/* Sidebar Styles */
-.sidebar-nav {
-position: absolute;
-top: 0;
-width: 150px;
-margin: 0;
-padding: 0;
-list-style: none;
-}
-.sidebar-nav li {
-text-indent: 20px;
-line-height: 40px;
-}
-.sidebar-nav li a {
-display: block;
-text-decoration: none;
-color: #599300;
-}
-.sidebar-nav li a:hover {
-text-decoration: none;
-color: #fff;
-background: rgba(255,255,255,0.2);
-}
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-text-decoration: none;
-}
-.sidebar-nav > .sidebar-brand {
-height: 65px;
-font-size: 18px;
-line-height: 60px;
-}
-.sidebar-nav > .sidebar-brand a {
-color: #599300;
-}
-.sidebar-nav > .sidebar-brand a:hover {
-color: #fff;
-background: none;
-}
-@media(min-width:768px) {
-#wrapper {
-padding-left: 150px;
-}
-#wrapper.toggled {
-padding-left: 0;
-}
-#sidebar-wrapper {
-width: 150px;
-}
-#wrapper.toggled #sidebar-wrapper {
-width: 0;
-}
-#page-content-wrapper {
-padding: 20px;
-position: relative;
-}
-#wrapper.toggled #page-content-wrapper {
-position: relative;
-margin-right: 0;
-}
-}
+
+
+.navbar-nav > li > a{
+    
+		font-family: Helvetica, FreeSans, 'Liberation Sans', Helmet, Arial, sans-serif;
+		font-size: 12px;
+		font-stretch: normal;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: bold;
+		
+		
+		}

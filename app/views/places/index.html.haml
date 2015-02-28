@@ -1,20 +1,26 @@
 %p#notice=notice
 
-%h1 All places
+%h1
+	%span All places
 .panel.panel-default
 	-@places.each do |place|
 		.panel-heading
 			%h1.panel-title=place.name
 		.panel-body
-			%p=truncate(place.description, length: 440, separator: ' ')
-			=image_tag place.image.url(:small)
+			.col-sm-1
+				%h3 How many likes
+			.col-sm-9
+				%p=truncate(place.description, length: 440, separator: ' ')
+			.com-sm-3
+				=image_tag place.image.url(:small)
 		.panel-footer
 			=link_to 'Like', place
 			
 			.pull-right
 				=link_to 'Show', place
-				=link_to 'Edit', place
+				=link_to 'Edit', edit_place_path(place)
 				=link_to 'Destroy', place
+				
 
 / <p id="notice"><%= notice %></p>
 

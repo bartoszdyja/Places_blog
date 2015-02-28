@@ -1,0 +1,25 @@
+!!! 5
+%html
+	%head
+		%title Great Places
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+	%body
+		%nav.navbar.navbar-inverse.navbar-fixed-bottom
+			%ul.nav.navbar-nav
+				%li
+					=link_to "Bruder & Dyja", root_path
+				%li
+					=link_to "O nas", root_path
+				%li
+					=link_to "Poznaj nas", root_path
+				%li
+					=link_to "Kredyty hipoteczne", root_path
+
+
+		.container-fluid
+			.row
+				.col-lg-12
+					=yield
+
