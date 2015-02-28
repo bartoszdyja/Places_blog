@@ -15,12 +15,16 @@
 				=image_tag place.image.url(:small)
 		.panel-footer
 			=link_to 'Like', place
+			Created by 
+			=place.user.email
+			
 			
 			.pull-right
 				=link_to 'Show', place
-				=link_to 'Edit', edit_place_path(place)
-				=link_to 'Destroy', place
-				
+				-if place.user == current_user
+					=link_to 'Edit', edit_place_path(place)
+					=link_to 'Destroy', place
+					
 
 / <p id="notice"><%= notice %></p>
 

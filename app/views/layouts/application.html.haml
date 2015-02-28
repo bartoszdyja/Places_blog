@@ -20,10 +20,14 @@
 						%li.active
 							=link_to "Home", root_path
 					%ul.nav.navbar-nav.navbar-right
-						%li
-							=link_to "Sign In", root_path
-						%li
-							=link_to "Register", root_path
+						-if user_signed_in?
+							%li 
+								=link_to "You are signed in as #{current_user.email}", edit_user_registration_path
+							%li
+								=link_to "Logout", destroy_user_session_path, method: :delete
+						-else
+							%li
+								=link_to "Login"
 	#wrapper
 		#sidebar-wrapper
 			%ul.sidebar-nav
