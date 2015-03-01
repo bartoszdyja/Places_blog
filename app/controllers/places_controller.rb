@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    @places = Place.order('created_at DESC').all
   end
 
   # GET /places/1
@@ -25,6 +25,7 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.new(place_params)
+    @place.user = current_user
 
     respond_to do |format|
       if @place.save

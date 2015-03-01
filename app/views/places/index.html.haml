@@ -1,11 +1,10 @@
-%p#notice=notice
-
 %h1
 	%span All places
 .panel.panel-default
 	-@places.each do |place|
 		.panel-heading
-			%h1.panel-title=place.name
+			.panel-title=place.name
+			.pull-right Created by #{place.user.email}
 		.panel-body
 			.col-sm-1
 				%h3 How many likes
@@ -15,8 +14,7 @@
 				=image_tag place.image.url(:small)
 		.panel-footer
 			=link_to 'Like', place
-			Created by 
-			=place.user.email
+			
 			
 			
 			.pull-right

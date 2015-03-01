@@ -13,12 +13,29 @@ h1
   margin-bottom: 50px;
 
 }
+
+.panel-title{
+  width: 40%;
+  float: left;
+  font:23px Helvetica;
+  font-weight: bold;
+
+  }
+
+.panel-heading{
+  padding-bottom: 40px;
+}
+
 h1 span
 {
   background-color: white;
   border-radius: 5px;
   position: relative;
   text-align: center;
+}
+
+#wrapper{
+  margin-top: 50px;
 }
 
 textarea#place_description {
