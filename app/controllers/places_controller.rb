@@ -62,10 +62,16 @@ class PlacesController < ApplicationController
     end
   end
 
-  def test
-    
-    @local_var = "asdf"   
-    render layout: "test.html.haml"
+  def upvote
+    @place = Place.find(params[:id])
+    @place.liked_by current_user
+    redirect_to root_path, notice: 'You successfully voted on this place'
+  end
+
+  def downvote
+    @place = Place.find(params[:id])
+    @place.downvote_from current_user
+    redirect_to root_path, notice: 'You successfully voted down this place'
   end
 
   private

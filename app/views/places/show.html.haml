@@ -1,8 +1,11 @@
 
 
-.panel.panel-default
+.panel.panel-default#show
 	.panel-heading
 		%h3=@place.name
+		.pull-right
+			Rank 
+			=@place.votes_for.size
 	.panel-body
 		.col-sm-5
 			%p
@@ -11,9 +14,9 @@
 		.col-sm-7
 			%center
 				=image_tag @place.image.url(:normal)
+	.panel-footer
+		=link_to 'Edit', edit_place_path(@place)
+		=link_to 'Back', places_path
 
-=link_to 'Edit', edit_place_path(@place)
-=link_to 'Back', places_path
-<p id="notice"><%= notice %></p>
 
 

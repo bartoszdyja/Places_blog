@@ -26,6 +26,10 @@ h1
   padding-bottom: 40px;
 }
 
+.panel-footer{
+  padding-bottom: 30px;
+}
+
 h1 span
 {
   background-color: white;
@@ -125,8 +129,9 @@ body
   background: rgba(255,255,255,0.75);
 }
 
-.panel {
+.panel-default {
 	background-color: transparent;
+  margin-bottom: 30px;
 }
 
 .panel-footer{

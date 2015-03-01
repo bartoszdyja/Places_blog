@@ -7,14 +7,22 @@
 			.pull-right Created by #{place.user.email}
 		.panel-body
 			.col-sm-1
-				%h3 How many likes
+				%h2=place.votes_for.size-place.get_downvotes.size
+				%p
+					%span.glyphicon.glyphicon-thumbs-up
+					=place.votes_for.size
+					%span.glyphicon.glyphicon-thumbs-down
+					=place.get_downvotes.size
+				
 			.col-sm-9
 				%p=truncate(place.description, length: 440, separator: ' ')
 			.com-sm-3
 				=image_tag place.image.url(:small)
 		.panel-footer
-			=link_to 'Like', place
-			
+			-if user_signed_in?
+				=link_to 'Like', like_place_path(place), method: :put
+				=link_to 'Dislike', dislike_place_path(place), method: :put
+				
 			
 			
 			.pull-right
