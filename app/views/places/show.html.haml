@@ -15,8 +15,15 @@
 			%center
 				=image_tag @place.image.url(:normal)
 	.panel-footer
-		=link_to 'Edit', edit_place_path(@place)
+		-if @place.user = current_user
+			=link_to 'Edit', edit_place_path(@place)
+			=link_to 'Destroy'
 		=link_to 'Back', places_path
-
+	.panel-body
+		-@comments.each do |comment|
+			%p
+			=comment.body
+			Added by
+			=comment.user.email
 
 
