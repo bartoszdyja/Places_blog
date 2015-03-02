@@ -7,10 +7,10 @@
 			.pull-right Created by #{place.user.email}
 		.panel-body
 			.col-sm-1
-				%h2=place.votes_for.size-place.get_downvotes.size
+				%h2=place.get_upvotes.size-place.get_downvotes.size
 				%p
 					%span.glyphicon.glyphicon-thumbs-up
-					=place.votes_for.size
+					=place.get_upvotes.size
 					%span.glyphicon.glyphicon-thumbs-down
 					=place.get_downvotes.size
 				

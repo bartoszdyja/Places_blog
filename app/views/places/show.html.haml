@@ -19,11 +19,16 @@
 			=link_to 'Edit', edit_place_path(@place)
 			=link_to 'Destroy'
 		=link_to 'Back', places_path
-	.panel-body
+	.well
+		%h2 Comments (#{@comments.size})
 		-@comments.each do |comment|
-			%p
-			=comment.body
-			Added by
-			=comment.user.email
+			.well
+				%h4#com=comment.user.email
+				%p#com=comment.body
+				.pull-right
+					%p#com_date
+						Added 
+						=time_ago_in_words(comment.created_at) 
+						ago
 
 

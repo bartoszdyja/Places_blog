@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   		put "like", to: 'places#upvote'
   		put "dislike", to: 'places#downvote'
   	end
+  	resources :comments
   end
 
   root 'places#index'

@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /places
   # GET /places.json
@@ -10,7 +11,7 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
-    @comments = @place.comments.all
+    @comments = @place.comments.order('created_at DESC').all
   end
 
   # GET /places/new
